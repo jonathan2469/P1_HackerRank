@@ -1,0 +1,26 @@
+ static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2){
+         SinglyLinkedListNode aux1 = head1, aux2 = head2;
+         int contador1 = 0, contador2 = 0;
+         while((aux1) != null){
+             aux1 = aux1.next;
+             contador1++;
+         }while(aux2 != null){
+             aux2 = aux2.next;
+             contador2++;
+         }
+         aux1 = head1;
+         aux2 = head2;
+         if(contador1 != contador2)
+         {
+             return false;
+         }else{
+             while(aux1 != null){
+                 if(aux1.data != aux2.data){
+                     return false;
+                 }
+                 aux1 = aux1.next;
+                 aux2 = aux2.next;
+             }
+             return true;
+         }
+     }
