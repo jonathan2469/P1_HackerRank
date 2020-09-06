@@ -1,0 +1,13 @@
+static int getNode(SinglyLinkedListNode head, int positionFromTail){
+         int contador = -1;
+         SinglyLinkedListNode aux = head;
+         while(aux != null){
+             aux = aux.next;
+             contador++;
+         }
+         aux = head;
+         for(int i = 0; i < (contador - positionFromTail); i++){
+             aux = aux.next;
+         }
+         return aux.data;
+     }
