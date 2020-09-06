@@ -1,0 +1,12 @@
+ static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
+         SinglyLinkedListNode nuevo =  new SinglyLinkedListNode(data);
+         nuevo.next = null;
+         if(head == null){
+             head = nuevo;
+         }else{
+             nuevo.next = head;
+
+             head = nuevo;
+         }
+         return head;
+     }
