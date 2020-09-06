@@ -1,0 +1,17 @@
+static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+         SinglyLinkedListNode nuevo = new SinglyLinkedListNode(data);
+         SinglyLinkedListNode aux = head;
+         SinglyLinkedListNode ant = null;
+         nuevo.next = null;
+         if(head == null){
+             head = nuevo;
+         }else{
+             for(int i = 0; i < position; i++){
+                 ant = aux;
+                 aux = aux.next;
+             }
+             ant.next = nuevo;
+             nuevo.next = aux;
+         }
+         return head;
+     }
